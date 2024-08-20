@@ -14,7 +14,7 @@ export const products = [
         "id": "1",
         "userId": "101",
         "productId": "1",
-        "rating": 5,
+        "rating": 1,
         "comment": "Excellent phone with great features!"
       },
       {

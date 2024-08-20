@@ -1,7 +1,10 @@
 import TextClip from "@/utils/TextClip"
 import { Rating } from "@mui/material"
 
-const ProductCard = ({product ,value }: { product: any, value:any}) => {
+const ProductCard = ({product }: { product: any}) => {
+
+  let productRanting = product.reviews?.reduce((acc: number, item: any) => acc + item.rating, 0) / product.reviews?.length
+
   return (
     <div className="w-[240px] shadow-lg rounded-md p-2 cursor-pointer flex flex-col flex-1">
         <div className="relative">
@@ -10,7 +13,7 @@ const ProductCard = ({product ,value }: { product: any, value:any}) => {
         <div className="mt-2">
             <div className="text-sm text-slate-500">{TextClip(product.name)}</div>
             <div className="text-sm text-slate-500">{product.price} ₺</div>
-            <Rating name="read-only" value={value} readOnly />
+            <Rating name="read-only" value={productRanting} readOnly />
 
         </div>
             
