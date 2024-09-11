@@ -1,6 +1,6 @@
 export const products = [
   {
-    "id": "1",
+    "id": "1341325151",
     "name": "Apple iPhone 14",
     "description": "Latest iPhone with A15 Bionic chip, 5G support.",
     "price": 999.99,
@@ -11,14 +11,14 @@ export const products = [
     "image": "https://images.pexels.com/photos/3810744/pexels-photo-3810744.jpeg",
     "reviews": [
       {
-        "id": "1",
+        "id": "5235151",
         "userId": "101",
         "productId": "1",
         "rating": 1,
         "comment": "Excellent phone with great features!"
       },
       {
-        "id": "2",
+        "id": "261231234",
         "userId": "102",
         "productId": "1",
         "rating": 4,
@@ -27,7 +27,7 @@ export const products = [
     ]
   },
   {
-    "id": "2",
+    "id": "212341234",
     "name": "Samsung Galaxy S23",
     "description": "Flagship smartphone with cutting-edge technology.",
     "price": 849.99,
@@ -39,7 +39,7 @@ export const products = [
     "reviews": []
   },
   {
-    "id": "3",
+    "id": "351235125",
     "name": "Dell XPS 13",
     "description": "High-performance laptop with Intel i7 and 16GB RAM.",
     "price": 1299.99,
@@ -50,7 +50,7 @@ export const products = [
     "image": "https://images.pexels.com/photos/4605485/pexels-photo-4605485.jpeg",
     "reviews": [
       {
-        "id": "3",
+        "id": "3553241251",
         "userId": "103",
         "productId": "3",
         "rating": 5,
@@ -59,7 +59,7 @@ export const products = [
     ]
   },
   {
-    "id": "4",
+    "id": "4523515",
     "name": "Sony WH-1000XM4",
     "description": "Noise-canceling wireless headphones.",
     "price": 349.99,
@@ -70,7 +70,7 @@ export const products = [
     "reviews": []
   },
   {
-    "id": "5",
+    "id": "5613251234",
     "name": "Apple MacBook Air M2",
     "description": "Lightweight laptop with Apple's M2 chip.",
     "price": 1199.99,
@@ -81,7 +81,7 @@ export const products = [
     "image": "https://images.pexels.com/photos/4312107/pexels-photo-4312107.jpeg",
     "reviews": [
       {
-        "id": "4",
+        "id": "412341251",
         "userId": "104",
         "productId": "5",
         "rating": 5,
@@ -90,7 +90,7 @@ export const products = [
     ]
   },
   {
-    "id": "6",
+    "id": "6612341234",
     "name": "NVIDIA GeForce RTX 4080",
     "description": "High-end graphics card for gaming and professional use.",
     "price": 1199.99,
@@ -100,7 +100,7 @@ export const products = [
     "image": "https://images.pexels.com/photos/3041657/pexels-photo-3041657.jpeg",
     "reviews": [
       {
-        "id": "5",
+        "id": "5612341",
         "userId": "105",
         "productId": "6",
         "rating": 4,
@@ -109,7 +109,7 @@ export const products = [
     ]
   },
   {
-    "id": "7",
+    "id": "761236512",
     "name": "Google Pixel 7",
     "description": "Smartphone with Google’s latest AI technology.",
     "price": 699.99,
@@ -120,7 +120,7 @@ export const products = [
     "reviews": []
   },
   {
-    "id": "8",
+    "id": "81623612361",
     "name": "Microsoft Surface Pro 9",
     "description": "Versatile 2-in-1 tablet with detachable keyboard.",
     "price": 899.99,
@@ -132,7 +132,7 @@ export const products = [
     "reviews": []
   },
   {
-    "id": "9",
+    "id": "9612351235",
     "name": "Canon EOS R5",
     "description": "Full-frame mirrorless camera with 8K video recording.",
     "price": 3899.99,
@@ -144,7 +144,7 @@ export const products = [
     "reviews": []
   },
   {
-    "id": "10",
+    "id": "10162361236",
     "name": "Apple Watch Series 8",
     "description": "Smartwatch with health and fitness tracking.",
     "price": 399.99,
@@ -154,7 +154,7 @@ export const products = [
     "image": "https://images.pexels.com/photos/931683/pexels-photo-931683.jpeg",
     "reviews": [
       {
-        "id": "6",
+        "id": "62161261616",
         "userId": "106",
         "productId": "10",
         "rating": 5,
@@ -163,7 +163,7 @@ export const products = [
     ]
   },
   {
-    "id": "11",
+    "id": "1116126161",
     "name": "Asus ROG Zephyrus G14",
     "description": "Gaming laptop with AMD Ryzen 9 and RTX 3060.",
     "price": 1499.99,
@@ -175,7 +175,7 @@ export const products = [
     "reviews": []
   },
   {
-    "id": "12",
+    "id": "12612361236126",
     "name": "Samsung Galaxy Tab S8",
     "description": "High-performance tablet with S Pen included.",
     "price": 649.99,
@@ -186,7 +186,7 @@ export const products = [
     "reviews": []
   },
   {
-    "id": "13",
+    "id": "1312361236126",
     "name": "LG UltraGear 27GN950",
     "description": "27-inch 4K UHD gaming monitor with 144Hz refresh rate.",
     "price": 799.99,
@@ -197,7 +197,7 @@ export const products = [
     "reviews": []
   },
   {
-    "id": "14",
+    "id": "1421612361261",
     "name": "GoPro HERO11 Black",
     "description": "Action camera with advanced stabilization and 5.3K video.",
     "price": 399.99,
@@ -209,7 +209,7 @@ export const products = [
     "reviews": []
   },
   {
-    "id": "15",
+    "id": "151261261261",
     "name": "Apple AirPods Pro 2nd Gen",
     "description": "Wireless earbuds with active noise cancellation.",
     "price": 249.99,
