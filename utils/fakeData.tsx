@@ -13,16 +13,9 @@ export const products = [
       {
         "id": "5235151",
         "userId": "101",
-        "productId": "1",
-        "rating": 1,
+        "user": { "name": "John Doe" },
+        "rating": 5,
         "comment": "Excellent phone with great features!"
-      },
-      {
-        "id": "261231234",
-        "userId": "102",
-        "productId": "1",
-        "rating": 4,
-        "comment": "Good value for money, but a bit expensive."
       }
     ]
   },
@@ -36,7 +29,15 @@ export const products = [
     "category": "Smartphones",
     "inStock": true,
     "image": "https://images.pexels.com/photos/5668669/pexels-photo-5668669.jpeg",
-    "reviews": []
+    "reviews": [
+      {
+        "id": "134231",
+        "userId": "102",
+        "user": { "name": "Jane Smith" },
+        "rating": 4,
+        "comment": "Great performance but slightly overpriced."
+      }
+    ]
   },
   {
     "id": "351235125",
@@ -52,7 +53,7 @@ export const products = [
       {
         "id": "3553241251",
         "userId": "103",
-        "productId": "3",
+        "user": { "name": "Alice Johnson" },
         "rating": 5,
         "comment": "Amazing laptop with excellent build quality!"
       }
@@ -67,7 +68,15 @@ export const products = [
     "category": "Headphones",
     "inStock": true,
     "image": "https://images.pexels.com/photos/4997834/pexels-photo-4997834.jpeg",
-    "reviews": []
+    "reviews": [
+      {
+        "id": "512412412",
+        "userId": "104",
+        "user": { "name": "Michael Brown" },
+        "rating": 4,
+        "comment": "Great noise cancellation but uncomfortable after long use."
+      }
+    ]
   },
   {
     "id": "5613251234",
@@ -82,8 +91,8 @@ export const products = [
     "reviews": [
       {
         "id": "412341251",
-        "userId": "104",
-        "productId": "5",
+        "userId": "105",
+        "user": { "name": "Sarah Connor" },
         "rating": 5,
         "comment": "Incredible performance and battery life!"
       }
@@ -101,8 +110,8 @@ export const products = [
     "reviews": [
       {
         "id": "5612341",
-        "userId": "105",
-        "productId": "6",
+        "userId": "106",
+        "user": { "name": "Chris Evans" },
         "rating": 4,
         "comment": "Great performance but a bit pricey."
       }
@@ -117,7 +126,15 @@ export const products = [
     "category": "Smartphones",
     "inStock": true,
     "image": "https://images.pexels.com/photos/5312269/pexels-photo-5312269.jpeg",
-    "reviews": []
+    "reviews": [
+      {
+        "id": "7231212",
+        "userId": "107",
+        "user": { "name": "Emily Davis" },
+        "rating": 5,
+        "comment": "Fantastic camera and smooth software experience."
+      }
+    ]
   },
   {
     "id": "81623612361",
@@ -129,7 +146,15 @@ export const products = [
     "category": "Tablets",
     "inStock": true,
     "image": "https://images.pexels.com/photos/3861487/pexels-photo-3861487.jpeg",
-    "reviews": []
+    "reviews": [
+      {
+        "id": "234123",
+        "userId": "108",
+        "user": { "name": "David Lee" },
+        "rating": 4,
+        "comment": "Great for productivity but battery life could be better."
+      }
+    ]
   },
   {
     "id": "9612351235",
@@ -141,7 +166,15 @@ export const products = [
     "category": "Cameras",
     "inStock": true,
     "image": "https://images.pexels.com/photos/2294427/pexels-photo-2294427.jpeg",
-    "reviews": []
+    "reviews": [
+      {
+        "id": "8123612",
+        "userId": "109",
+        "user": { "name": "Sophia Miller" },
+        "rating": 5,
+        "comment": "Best camera for professionals!"
+      }
+    ]
   },
   {
     "id": "10162361236",
@@ -155,9 +188,30 @@ export const products = [
     "reviews": [
       {
         "id": "62161261616",
-        "userId": "106",
-        "productId": "10",
+        "userId": "110",
+        "user": { "name": "Olivia Wilson" },
         "rating": 5,
+        "comment": "Perfect companion for fitness enthusiasts."
+      },
+      {
+        "id": "62161261616",
+        "userId": "110",
+        "user": { "name": "Olivia Wilson" },
+        "rating": 3,
+        "comment": "Perfect companion for fitness enthusiasts."
+      },
+      {
+        "id": "62161261616",
+        "userId": "110",
+        "user": { "name": "Olivia Wilson" },
+        "rating": 2,
+        "comment": "Perfect companion for fitness enthusiasts."
+      },
+      {
+        "id": "62161261616",
+        "userId": "110",
+        "user": { "name": "Olivia Wilson" },
+        "rating": 4,
         "comment": "Perfect companion for fitness enthusiasts."
       }
     ]
@@ -172,7 +226,15 @@ export const products = [
     "category": "Laptops",
     "inStock": true,
     "image": "https://images.pexels.com/photos/4605387/pexels-photo-4605387.jpeg",
-    "reviews": []
+    "reviews": [
+      {
+        "id": "1346134",
+        "userId": "111",
+        "user": { "name": "William Taylor" },
+        "rating": 5,
+        "comment": "Excellent gaming performance!"
+      }
+    ]
   },
   {
     "id": "12612361236126",
@@ -183,40 +245,34 @@ export const products = [
     "category": "Tablets",
     "inStock": true,
     "image": "https://images.pexels.com/photos/3825515/pexels-photo-3825515.jpeg",
-    "reviews": []
+    "reviews": [
+      {
+        "id": "512341",
+        "userId": "112",
+        "user": { "name": "Isabella Martin" },
+        "rating": 4,
+        "comment": "Great tablet, but the S Pen integration could be improved."
+      }
+    ]
   },
   {
     "id": "1312361236126",
     "name": "LG UltraGear 27GN950",
-    "description": "27-inch 4K UHD gaming monitor with 144Hz refresh rate.",
+    "description": "27-inch 4K gaming monitor with 144Hz refresh rate.",
     "price": 799.99,
+    "oldPrice": 899.99,
     "brand": "LG",
     "category": "Monitors",
     "inStock": true,
-    "image": "https://images.pexels.com/photos/3041657/pexels-photo-3041657.jpeg",
-    "reviews": []
-  },
-  {
-    "id": "1421612361261",
-    "name": "GoPro HERO11 Black",
-    "description": "Action camera with advanced stabilization and 5.3K video.",
-    "price": 399.99,
-    "oldPrice": 429.99,
-    "brand": "GoPro",
-    "category": "Cameras",
-    "inStock": true,
-    "image": "https://images.pexels.com/photos/2115219/pexels-photo-2115219.jpeg",
-    "reviews": []
-  },
-  {
-    "id": "151261261261",
-    "name": "Apple AirPods Pro 2nd Gen",
-    "description": "Wireless earbuds with active noise cancellation.",
-    "price": 249.99,
-    "brand": "Apple",
-    "category": "Headphones",
-    "inStock": true,
-    "image": "https://images.pexels.com/photos/4058125/pexels-photo-4058125.jpeg",
-    "reviews": []
+    "image": "https://images.pexels.com/photos/194094/pexels-photo-194094.jpeg",
+    "reviews": [
+      {
+        "id": "6312361236",
+        "userId": "113",
+        "user": { "name": "James Clark" },
+        "rating": 5,
+        "comment": "Best gaming monitor I've ever owned!"
+      }
+    ]
   }
 ];
