@@ -1,12 +1,9 @@
 "use client"
 
-import { RxAvatar } from 'react-icons/rx';
 import Avatar from '../general/Avatar';
 import { Rating } from '@mui/material';
 
-const Comment = ({prd}: {prd : any}) => {
-    console.log(prd , "prd");
-    
+const Comment = ({prd}: {prd : any}) => {    
   return (
     <div className='flex md:justify-between border rounded-md w-full mb-3 p-2 md:p-5'>
          <div className='flex items-start flex-col'>

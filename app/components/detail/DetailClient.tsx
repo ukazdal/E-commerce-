@@ -1,6 +1,6 @@
 "use client"
 
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import PageContainers from "../containers/PageContainers"
 import Counter from "../general/Counter"
 import {Rating } from "@mui/material";
@@ -21,8 +21,8 @@ export type CardProductProps = {
 
 
 const DetailClient = ({product} : {product: any}) => {
-    const {productCartQty, addTocart} = useCart();
-
+    const {productCartQty, addTocart, cartPrdct} = useCart();
+    const [displayButton, setDisplayButton] = useState(false);
     const [cardProduct, setCardProduct] = useState<CardProductProps>({
         id: product.id,
         name: product.name,
@@ -32,6 +32,14 @@ const DetailClient = ({product} : {product: any}) => {
         image: product.image,
         inStock: product.inStock
     });
+    
+    useEffect(() => {
+        setDisplayButton(false)
+        let controlDisplay: any = cartPrdct?.findIndex(prd => prd.id === product.id)
+        if(controlDisplay > - 1) {
+            setDisplayButton(true)
+        }
+    }, [cartPrdct]);
 
     const increaseFunc = () => {
         if (cardProduct.quantity >= 10) return; 
@@ -63,9 +71,18 @@ const DetailClient = ({product} : {product: any}) => {
                     <div>Stok Durumu :</div>
                     {product.inStock ? <div className="text-green-500">Stokta Var</div> : <div className="text-red-500">Stokta Yok</div>}
                 </div>
-                <Counter increaseFunc={increaseFunc} decreaseFunc={decreaseFunc} cardProduct={cardProduct} />
                 <div className="text-lg md:text-xl text-orange-600 font-bold"> {product?.price} ₺</div>
-                <Button text="Sepete Ekle" small onClick={() => addTocart(cardProduct)}/>
+                <Counter increaseFunc={increaseFunc} decreaseFunc={decreaseFunc} cardProduct={cardProduct}/>
+                { displayButton ? 
+                    <>
+                        <Button text="Bu Ürünü Sepetten Çıkar" small onClick={() => {}} />
+                    </>
+                    :
+                    <>
+                    <Button text="Sepete Ekle" small onClick={() => addTocart(cardProduct)} />
+
+                    </>
+                }
             </div>
         </div>
         <Heading text="Yorumlar" />
