@@ -1,6 +1,7 @@
 import { useEffect, useRef, useState } from "react";
 import dataSlider from "./Slider.data.mocks"
 import { FaLongArrowAltLeft, FaLongArrowAltRight } from "react-icons/fa";
+import Image from "next/image";
 
 interface Slider {
   id?: string;
@@ -79,10 +80,9 @@ const Slider: React.FC<Slider> = ({
     <div id={id} className="my-4 relative" data-index="0">
       <div ref={slideRef} className="relative overflow-hidden rounded-t-md ">
         <a href={sliderData.link}>
-          <img
+          <Image
             src={sliderData.value}
             height={300}
-            width="100%"
             alt={sliderData.value}
             className="hover:scale-105 duration-1000 rounded-t-md"
           />
@@ -138,7 +138,7 @@ const Slider: React.FC<Slider> = ({
               key={data.id}
               className="hidden md:block my-2 border-[4px] border-[#FF6700] rounded-full object-cover md:hover:scale-105 duration-1000"
             >
-              <img
+              <Image
                 src={data.smallvalue}
                 alt={data.value}
                 width={70}

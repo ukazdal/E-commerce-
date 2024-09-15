@@ -1,4 +1,5 @@
 
+import Image from "next/image";
 import { RxAvatar } from "react-icons/rx";
 
 interface AvatarProps {
@@ -6,7 +7,7 @@ interface AvatarProps {
 }
 
 const Avatar:React.FC<AvatarProps> = ({image}) => {
- if(image) return <img src={image} alt="avatar" className="rounded-full h-10 w-10" />
+ if(image) return <Image width={40} height={40} src={image} alt="avatar" className="rounded-full" />
  return <div><RxAvatar size={40} /></div>
 
 }

@@ -1,6 +1,7 @@
 "use client"
 import TextClip from "@/utils/TextClip"
 import { Rating } from "@mui/material"
+import Image from "next/image"
 import { useRouter } from "next/navigation"
 
 const ProductCard = ({product }: { product: any}) => {
@@ -11,7 +12,7 @@ const ProductCard = ({product }: { product: any}) => {
   return (
     <div onClick={() => router.push(`product/${product.id}`)} className="w-[240px] shadow-lg rounded-md p-2 cursor-pointer flex flex-col flex-1">
         <div className="relative">
-            <img src={product.image} alt={product.name} className="w-full h-[200px] object-cover" />
+            <Image width={400} height={200} src={product.image} alt={product.name} className="object-cover" />
         </div>
         <div className="mt-2">
             <div className="text-sm text-slate-500">{TextClip(product.name)}</div>

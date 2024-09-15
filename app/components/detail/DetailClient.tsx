@@ -8,6 +8,7 @@ import Button from "../general/Button";
 import Comment from "./Comment";
 import Heading from "../general/Heading";
 import useCart from "@/hooks/useCart";
+import Image from "next/image";
 
 export type CardProductProps = { 
     id: string;
@@ -59,7 +60,7 @@ const DetailClient = ({product} : {product: any}) => {
     <PageContainers>
         <div className="block md:flex md:flex-row flex-col gap-10 justify-center mb-5">
             <div className="relative md:h-[300px] w-full md:w-[200px] border rounded-md p-1">
-                <img src={product?.image} alt={product?.name} className="rounded-md object-contain h-full w-full" />
+                <Image width={900} height={900} src={product?.image} alt={product?.name} className="rounded-md object-contain h-full w-full" />
             </div>
             <div className="w-full md:w-3/4 space-y-3"> 
                 <div className="text-xl md:text-2xl"> 
