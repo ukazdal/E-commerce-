@@ -9,7 +9,7 @@ const CardCount = () => {
   return (
     <div className="hidden md:flex relative">
       <RiShoppingBasketFill size={30} />
-      <div className="absolute -top-2 -right-2 bg-white text-orange-500 w-5 h-5 flex items-center justify-center rounded-full text-xs"> {cartPrdct?.length}</div>
+      <div className="absolute -top-2 -right-2 bg-white text-orange-500 w-5 h-5 flex items-center justify-center rounded-full text-xs"> {cartPrdct?.length ?? 0}</div>
     </div>
   )
 }
