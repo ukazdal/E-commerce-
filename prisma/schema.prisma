@@ -1,0 +1,39 @@
+model Account {
+  id                 Int     @id @default(auto()) @map("_id")
+  userId             String  @db.ObjectId @map("user_id")
+  type               String
+  provider           String
+  providerAccountId  String  @map("provider_account_id")
+  refresh_token      String? @db.Text
+  access_token       String? @db.Text
+  expires_at         Int?
+  token_type         String?
+  scope              String?
+  id_token           String? @db.st
+  session_state      String?
+  user               User    @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  @@unique([provider, providerAccountId])
+  @@map("accounts")
+}
+
+model User {
+  id            String    @id @default(auto()) @map("_id") 
+  name          String?
+  email         String?   @unique
+  emailVerified DateTime? @map("email_verified")
+  image         String?
+  hasdedPassword String?  @map("hashed_password")
+  cretedAt      DateTime  @default(now()) @map("created_at")
+  updatedAt     DateTime  @updatedAt @map("updated_at")
+  role Role   @default(USER)
+  accounts      Account[]
+
+  @@map("users")
+}
+
+
+enum Role {
+  USER
+  ADMIN
+}
