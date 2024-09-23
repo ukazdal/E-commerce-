@@ -20,25 +20,30 @@ const RegisterClient = () => {
         watch,
         formState: { errors },
       } = useForm<FieldValues>()
+      
       const onSubmit: SubmitHandler<FieldValues> = (data) => {
         axios.post('/api/register', data).then(() => {
-          toast.success("User registered successfully.")
+          toast.success("User registered successfully.");
           signIn('credentials', {
             email: data.email,
             password: data.password,
             redirect: false,
           }).then((callback) => {
             if(callback?.ok){
-              router.push('/cart')
+              router.push('/cart');
               router.refresh();
-              toast.success("Logged in successfully.")
+              toast.success("Logged in successfully.");
             }
             if(callback?.error){
-              toast.error(callback.error)
+              toast.error(callback.error);
             }
-          })
-        })
-            }
+          });
+        }).catch((error) => {
+          console.error("Error during registration:", error);
+          toast.error("An error occurred during registration.");
+        });
+      };
+      
   return (
     <AuthContainer>
        <div className="w-full md:w-[500px] p-3 shadow-lg rounded-md">
