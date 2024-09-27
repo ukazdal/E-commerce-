@@ -7,10 +7,10 @@ export async function getSession() {
 }
 
 export async function getCurrentUser() {
-    try{
+    try {
         const session = await getSession();
 
-        if(!session?.user?.email){
+        if (!session?.user?.email) {
             return null;
         }
 
@@ -20,7 +20,18 @@ export async function getCurrentUser() {
             }
         })
 
-    } catch(error){
+        if (!currentUser) {
+            return null;
+        }
+
+        return {
+            ...currentUser,
+            createdAt: currentUser.createdAt.toISOString(),
+            updatedAt: currentUser.updateAt.toISOString(),
+            emailVerified: currentUser.emailVerified?.toISOString() || null,
+        }
+
+    } catch (error: any) {
         console.error("Error during getCurrentUser:", error)
         return null;
     }
