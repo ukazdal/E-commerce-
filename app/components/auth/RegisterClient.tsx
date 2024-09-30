@@ -11,8 +11,15 @@ import axios from "axios";
 import toast from "react-hot-toast";
 import { signIn } from "next-auth/react";
 import { useRouter } from "next/navigation";
+import { User } from "@prisma/client";
+import { useEffect } from "react";
 
-const RegisterClient = () => {
+
+interface RegisterClientProps {
+  currentUser: User | null | undefined
+}
+
+const RegisterClient:React.FC<RegisterClientProps> = ({currentUser}) => {
   const router = useRouter();
     const {
         register,
@@ -43,6 +50,13 @@ const RegisterClient = () => {
           toast.error("An error occurred during registration.");
         });
       };
+      
+      useEffect(() => {
+        if(currentUser) {
+          router.push('/cart')
+          router.refresh();
+        }
+      }, [])
       
   return (
     <AuthContainer>
