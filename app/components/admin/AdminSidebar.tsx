@@ -29,7 +29,6 @@ const AdminSidebar = () => {
         <div>
             {adminPanel.map((admin, index) => (
                 <div key={index} className="p-2 border-b">
-
                     <AdminSidebarItems  key={index}  selected={pathname == admin.url} icon={admin.icon} name={admin.name} url={admin.url} />
                 </div>
             ))}
