@@ -72,7 +72,7 @@ const RegisterClient:React.FC<RegisterClientProps> = ({currentUser}) => {
                 <Link href="/login" className="underline ml-1 md:hover:text-blue-400 duration-200"> click here</Link>
            </div>
             <div className="text-center my-2 font-bold text-xl">OR</div>
-            <Button text="Register with Google" outline onClick={()=>{}} icon={FaGoogle}/>
+            <Button text="Register with Google" outline onClick={()=> signIn('google')} icon={FaGoogle}/>
        </div>
     </AuthContainer>
   )

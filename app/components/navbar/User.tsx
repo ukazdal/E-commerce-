@@ -17,8 +17,8 @@ const User: React.FC<UserProps> = ({ currentUser }) => {
   console.log(currentUser, "currentUser");
 
   const menuFunc = async (type: any) => {
+    setOpenMenu(false)
     if (type == "logout") {
-      setOpenMenu(false)
       await signOut()
       router.push("")
     } else if (type == "register") {
@@ -39,7 +39,7 @@ const User: React.FC<UserProps> = ({ currentUser }) => {
         <div className="absolute w-[200px] top-10 bg-white shadow-xl right-0 p-2 rounded-md">
           {currentUser ? (
             <div className="space-y-1">
-              <div className="text-slate-600">admin</div>
+              <div onClick={() => router.push('/admin')} className="text-slate-600">admin</div>
               <div onClick={() => menuFunc("logout")} className="text-slate-600">logout</div>
             </div>
           ) : (

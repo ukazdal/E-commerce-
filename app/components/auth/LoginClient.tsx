@@ -62,7 +62,7 @@ const LoginClient:React.FC<LoginClientProps> = ({currentUser}) => {
             <Link href="/register" className="underline ml-1 md:hover:text-blue-400 duration-200"> register</Link>
            </div>
             <div className="text-center my-2 font-bold text-xl">OR</div>
-            <Button text="Log In with Google" outline onClick={()=>{}} icon={FaGoogle}/>
+            <Button text="Log In with Google" outline onClick={()=> signIn('google')} icon={FaGoogle}/>
        </div>
     </AuthContainer>
   )
